@@ -1,3 +1,1 @@
-local entry = require(".common.main")
-
-entry.init()
+local main = require(".common.main")
