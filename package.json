@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "module:build": "cd src && ao build && cd .. && yarn module:load",
-    "module:publish": "cd src && ao publish process.wasm -w ../tools/key.json --tag=\"Memory-Limit\" --value=\"1-gb\" --tag=\"Compute-Limit\" --value=\"9000000000000\" && cd ..",
+    "module:publish": "cd src && ao publish process.wasm -w ../tools/key.json --tag=\"Memory-Limit\" --value=\"500-mb\" --tag=\"Compute-Limit\" --value=\"9000000000000\" && cd ..",
     "module:load": "cross-env NODE_OPTIONS=\"--import=./register.js \" node tools/load-module.ts",
     "module:spawn": "cross-env NODE_OPTIONS=\"--import=./register.js \" node tools/spawn-module.ts",
     "aos:build": "cross-env NODE_OPTIONS=\"--import=./register.js \" node tools/bundle-aos.ts",

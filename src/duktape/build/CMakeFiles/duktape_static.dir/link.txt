@@ -1,0 +1,2 @@
+/emsdk/upstream/emscripten/emar qc libduktape_static.a  CMakeFiles/duktape_static.dir/src/duktape.c.o
+/emsdk/upstream/emscripten/emranlib libduktape_static.a

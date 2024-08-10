@@ -33,6 +33,10 @@ export const AOS_WASM = fs.readFileSync(
   ),
 );
 
+export const LUA_JS_WASM = fs.readFileSync(
+  path.join(__dirname, 'fixtures/lua_js.wasm'),
+);
+
 export const BUNDLED_AOS_LUA = fs.readFileSync(
   path.join(__dirname, '../dist/aos-bundled.lua'),
   'utf-8',

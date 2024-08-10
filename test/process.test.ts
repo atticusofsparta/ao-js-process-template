@@ -1,6 +1,6 @@
 import assert from 'node:assert';
 import { describe, it } from 'node:test';
-import { createAntAosLoader } from './utils.ts';
+import { createLuaJsLoader } from './utils.ts';
 import {
   AO_LOADER_HANDLER_ENV,
   STUB_ADDRESS,
@@ -9,7 +9,7 @@ import {
 
 describe('aos', async () => {
   const { handle: originalHandle, memory: startMemory } =
-    await createAntAosLoader();
+    await createLuaJsLoader();
 
   async function handle(options = {}, mem = startMemory) {
     return originalHandle(
@@ -26,6 +26,8 @@ describe('aos', async () => {
     const result = await handle({
       Tags: [{ name: 'Action', value: 'Info' }],
     });
+
+    console.dir(result, { depth: null });
 
     const info = JSON.parse(result.Messages[0].Data);
     assert(info.Owner);
