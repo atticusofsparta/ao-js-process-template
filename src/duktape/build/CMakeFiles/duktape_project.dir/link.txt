@@ -1,0 +1,1 @@
+/emsdk/upstream/emscripten/emcc   -s WASM=1 @CMakeFiles/duktape_project.dir/objects1.rsp  -o duktape_project.html 
